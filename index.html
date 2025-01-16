@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" href="icon.png" type="image/png">
+  <title>Gestor de Compras</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestor de Compras</h1>
+    <form id="item-form">
+        <input type="text" id="item-input" placeholder="Agregar un artículo" required />
+        <select id="supermarket-select">
+        <option value="" disabled selected>Seleccionar</option>
+          <option value="TA-TA">TA-TA</option>
+          <option value="Planeta">Planeta</option>
+          <option value="Devoto Express">Devoto Express</option>
+        </select>
+        <button type="submit">Agregar</button>
+      </form>
+      <ul id="items-list"></ul>
+  </div>
+  <div class="recycle-bin-icon">
+    <i class="fas fa-trash-alt"></i>
+  </div>
+  <div class="recycle-bin-modal" id="recycle-bin-modal">
+    <ul id="recycle-bin-list"></ul>
+    <button id="close-bin">Cerrar</button>
+    <button id="empty-bin">Vaciar papelera</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

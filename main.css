@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Global Styles */
+html, button, option, ::placeholder {
+    font-family: "Poppins";
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container Styles */
+  .container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Title Styles */
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input[type="text"] {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  form select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  form select:focus {
+    outline: none;
+    border-color: #27ae60;
+  }
+  
+  form button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+  }
+  
+  form button:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* List Styles */
+  #items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #items-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  #items-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #items-list li.completed {
+    text-decoration: line-through;
+    color: #7f8c8d;
+  }
+  
+  #items-list li button {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  #items-list li button:hover {
+    color: #c0392b;
+  }
+  
+  #items-list li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  /* Estilo para el icono de la papelera */
+.recycle-bin-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .recycle-bin-icon:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Modal de la papelera */
+  .recycle-bin-modal {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .recycle-bin-modal h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .recycle-bin-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recycle-bin-modal li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .recycle-bin-modal li:last-child {
+    border-bottom: none;
+  }
+  
+  .recycle-bin-modal li button {
+    background: none;
+    border: none;
+    color: #27ae60;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .recycle-bin-modal li button:hover {
+    color: #2ecc71;
+  }
+  
+  #close-bin {
+    background-color: #3c7ee7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  #close-bin:hover {
+    background-color: #2e62b6;
+  }
+  .recycle-bin-modal .empty-message {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #empty-bin {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  #empty-bin:hover {
+    background-color: #c0392b;
+  }
